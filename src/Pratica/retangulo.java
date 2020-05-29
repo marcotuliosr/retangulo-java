@@ -26,9 +26,40 @@ public class retangulo {
 		while (altura <= 0.0) {
 			System.out.print("O valor deve ser positivo. Tente novamente: ");
 			altura = sc.nextDouble();
-
 		}
 
+		int opcao = 0;
+
+		while (opcao != 3) {
+
+			System.out.println("");
+			System.out.println("MENU:");
+			System.out.println("1 - Mostrar area");
+			System.out.println("2 - Mostrar perimetro");
+			System.out.println("3 - Sair");
+			System.out.println("Digite uma opcao: ");
+
+			opcao = sc.nextInt();
+
+			if (opcao == 1) {
+				double area = altura * largura;
+				System.out.printf("%nAREA = %.1f%n", area);
+			}
+
+			else if (opcao == 2) {
+				double perimetro = 2 * (altura + largura);
+				System.out.printf("%nPERIMETRO = %.1f%n", perimetro);
+			}
+
+			else if (opcao == 3) {
+				System.out.printf("%nFIM DO PROGRAMA!%n");
+			}
+
+			else {
+				System.out.printf("%nOPÇÃO INVALIDA%n");
+			}
+
+		}
 		sc.close();
 
 	}
